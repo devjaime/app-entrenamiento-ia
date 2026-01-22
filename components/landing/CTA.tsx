@@ -57,7 +57,7 @@ export default function CTA() {
 
                 {/* LinkedIn Button */}
                 <a
-                  href="https://www.linkedin.com/in/tu-perfil"
+                  href="https://www.linkedin.com/in/devjaime"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 w-full px-6 py-4 bg-[#0077B5] hover:bg-[#006399] text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"
@@ -81,7 +81,7 @@ export default function CTA() {
 
                 {/* Twitter/X Button */}
                 <a
-                  href="https://twitter.com/tu-usuario"
+                  href="https://twitter.com/devjaime"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 w-full px-6 py-4 bg-black hover:bg-gray-900 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"

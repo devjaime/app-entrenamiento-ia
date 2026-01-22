@@ -232,13 +232,15 @@ This project uses specialized AI agents for different tasks:
 
 ### 1. Contact Links
 
-Edit `components/landing/CTA.tsx` and `app/en/CTA.tsx`:
+Contact information is already configured:
 
 ```typescript
-LinkedIn: "https://www.linkedin.com/in/your-profile"
-Email: "your-email@example.com"
-Twitter: "https://twitter.com/your-username"
+LinkedIn: "https://www.linkedin.com/in/devjaime"
+Email: "hernandez.hs@gmail.com"
+Twitter: "https://twitter.com/devjaime"
 ```
+
+To update, edit `components/landing/CTA.tsx` and `app/en/CTA.tsx`.
 
 ### 2. Open Graph Image
 
