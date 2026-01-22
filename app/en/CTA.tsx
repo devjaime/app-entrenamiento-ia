@@ -65,7 +65,7 @@ export default function CTA() {
                 </a>
 
                 <a
-                  href="mailto:your-email@example.com?subject=Interest in AI Training App"
+                  href="mailto:hernandez.hs@gmail.com?subject=Interest in AI Training App"
                   className="flex items-center justify-center gap-3 w-full px-6 py-4 bg-white hover:bg-gray-100 text-gray-900 font-semibold rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

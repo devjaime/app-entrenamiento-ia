@@ -1,103 +1,194 @@
-# App de Entrenamiento Personalizada con IA
+# AI Health Coach - Personalized Training & Longevity App
 
-Una aplicación web de salud que usa inteligencia artificial para crear planes personalizados de entrenamiento y nutrición basados en datos médicos reales.
+<div align="center">
 
-## Características
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38B2AC?style=for-the-badge&logo=tailwind-css)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-MVP-orange?style=for-the-badge)
 
-- 🧬 Personalización basada en datos médicos (glucosa, colesterol, grasa corporal)
-- 🤖 IA que ajusta tu plan diariamente según tu progreso
-- 🍎 Recomendaciones de comidas con ingredientes disponibles
-- ⌚ Integración con Apple Watch
-- 📊 Objetivos dinámicos diarios y semanales
-- 🧠 Optimización de energía mental
-- 🎯 Compartir resultados en redes sociales
-- 📱 Demo interactiva con mockup de la app
-- 📊 Gráficos de progreso (diario, semanal, mensual)
-- 📈 Proyección de calidad de vida hasta 120+ años
-- 🌍 Versión en español e inglés
+**[🇪🇸 Español](#español) | [🇬🇧 English](#english) | [🚀 Live Demo](#) | [📖 Docs](./docs)**
 
-## Stack Tecnológico
+*An AI-powered health application that creates personalized training and nutrition plans based on real medical data, helping you live to 120+ years with optimal quality of life.*
 
-- **Framework**: Next.js 14 (App Router)
-- **Lenguaje**: TypeScript
-- **Estilos**: Tailwind CSS
-- **IA**: API de IA avanzada
-- **Persistencia**: LocalStorage (MVP)
+</div>
 
-## Instalación
+---
+
+## 🎯 Vision
+
+This project aims to revolutionize personalized health by combining:
+- 🧬 **Real medical data** (glucose, cholesterol, blood tests)
+- 🤖 **Advanced AI** for daily adaptive plans
+- ⌚ **Wearable integration** (Apple Watch, health devices)
+- 📸 **Computer vision** for progress tracking and meal analysis
+- 📊 **Predictive analytics** for longevity optimization
+
+**Goal**: Empower people to live 120+ years with sustained energy, vitality, and health.
+
+---
+
+## ✨ Key Features
+
+### 🎨 MVP Landing Page (Current)
+- ✅ Interactive app mockup demo
+- ✅ Dynamic progress charts (daily/weekly/monthly)
+- ✅ Lifespan quality projection visualization (up to 120+ years)
+- ✅ Bilingual support (Spanish/English)
+- ✅ Partner recruitment CTA
+- ✅ Fully responsive design
+- ✅ SEO optimized with Open Graph
+
+### 🚀 Planned Features (Roadmap)
+- ⏳ Functional onboarding questionnaire
+- ⏳ AI integration for plan generation
+- ⏳ Apple Watch HealthKit integration
+- ⏳ Photo upload for progress tracking
+- ⏳ Meal photo analysis with AI
+- ⏳ Real-time dashboard
+- ⏳ Social sharing capabilities
+- ⏳ Scientific validation with health professionals
+
+---
+
+## 🏗️ Architecture
+
+```mermaid
+graph TB
+    subgraph "User Interface"
+        A[Web App - Next.js]
+        B[Mobile - React Native]
+    end
+
+    subgraph "Data Collection"
+        C[Apple Watch - HealthKit]
+        D[Photo Upload - Progress]
+        E[Photo Upload - Meals]
+        F[Manual Input - Medical Data]
+    end
+
+    subgraph "AI Processing Layer"
+        G[AI Agent - Plan Generator]
+        H[AI Agent - Meal Analyzer]
+        I[AI Agent - Progress Tracker]
+        J[Computer Vision API]
+    end
+
+    subgraph "Backend Services"
+        K[API Routes - Next.js]
+        L[Database - PostgreSQL]
+        M[File Storage - S3/Cloudinary]
+        N[Cache - Redis]
+    end
+
+    subgraph "External Services"
+        O[AI API - Anthropic/OpenAI]
+        P[Apple Health API]
+        Q[Nutrition API]
+    end
+
+    A --> K
+    B --> K
+    C --> P
+    P --> K
+    D --> M
+    E --> M
+    F --> K
+
+    K --> G
+    K --> H
+    K --> I
+    M --> J
+
+    G --> O
+    H --> O
+    H --> J
+    I --> O
+
+    K --> L
+    K --> N
+
+    J --> Q
+
+    style A fill:#3b82f6
+    style B fill:#3b82f6
+    style G fill:#8b5cf6
+    style H fill:#8b5cf6
+    style I fill:#8b5cf6
+    style O fill:#ef4444
+```
+
+### Technical Stack
+
+**Frontend**
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Recharts for data visualization
+
+**Backend (Planned)**
+- Next.js API Routes
+- PostgreSQL / Supabase
+- Redis for caching
+- AWS S3 / Cloudinary for image storage
+
+**AI Integration (Planned)**
+- Advanced AI API for plan generation
+- Computer Vision for meal and progress photo analysis
+- Natural Language Processing for user interactions
+
+**Wearables (Planned)**
+- Apple HealthKit SDK
+- Real-time data synchronization
+- Activity, heart rate, sleep tracking
+
+**See [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for detailed technical documentation**
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+- Git
+
+### Installation
 
 ```bash
-# Instalar dependencias
+# Clone the repository
+git clone https://github.com/devjaime/app-entrenamiento-ia.git
+cd app-entrenamiento-ia
+
+# Install dependencies
 npm install
 
-# Ejecutar en desarrollo
+# Run development server
 npm run dev
+```
 
-# Build para producción
+Open [http://localhost:3000](http://localhost:3000) for Spanish version
+Open [http://localhost:3000/en](http://localhost:3000/en) for English version
+
+### Build for Production
+
+```bash
 npm run build
 npm start
 ```
 
-Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la landing page en español.
-Para ver la versión en inglés, visita [http://localhost:3000/en](http://localhost:3000/en).
+---
 
-## Configuración
-
-### 1. Personalizar Enlaces de Contacto
-
-Edita el archivo `components/landing/CTA.tsx` y actualiza:
-
-- LinkedIn: `https://www.linkedin.com/in/tu-perfil`
-- Email: `tu-email@ejemplo.com`
-- Twitter/X: `https://twitter.com/tu-usuario`
-
-### 2. Agregar Imagen Open Graph
-
-Para que la landing page se vea bien al compartir en redes sociales:
-
-1. Crea una imagen de 1200x630px
-2. Guárdala como `/public/og-image.jpg`
-3. Incluye:
-   - Logo o nombre de la app
-   - Propuesta de valor principal
-   - Diseño atractivo y profesional
-
-Herramientas recomendadas:
-- [Canva](https://www.canva.com/) - Plantillas gratuitas
-- [Figma](https://www.figma.com/) - Diseño profesional
-- [OG Image Generator](https://og-image.vercel.app/) - Generador online
-
-### 3. Actualizar Metadatos
-
-Edita `app/layout.tsx`:
-
-```typescript
-// Actualiza estos campos:
-metadataBase: new URL('https://tu-dominio.com'),
-authors: [{ name: "Tu Nombre" }],
-twitter: {
-  creator: "@tu_usuario",
-}
-```
-
-### 4. Variables de Entorno (Próximo paso)
-
-Cuando implementes la integración con IA:
-
-```bash
-# Crea un archivo .env.local
-AI_API_KEY=tu_api_key_aqui
-```
-
-## Estructura del Proyecto
+## 📁 Project Structure
 
 ```
-app_entrenamiento/
+app-entrenamiento-ia/
 ├── app/
-│   ├── page.tsx              # Landing page (Español)
-│   ├── layout.tsx            # Layout raíz con metadata
-│   ├── globals.css           # Estilos globales
-│   └── en/                   # Versión en inglés
+│   ├── page.tsx              # Landing page (Spanish)
+│   ├── layout.tsx            # Root layout with metadata
+│   ├── globals.css           # Global styles
+│   └── en/                   # English version
 │       ├── page.tsx
 │       ├── Hero.tsx
 │       ├── Features.tsx
@@ -106,119 +197,259 @@ app_entrenamiento/
 │       └── LifespanChart.tsx
 ├── components/
 │   └── landing/
-│       ├── Hero.tsx          # Sección hero
-│       ├── Features.tsx      # Características
-│       ├── Demo.tsx          # Demo interactiva con mockup
-│       ├── ProgressChart.tsx # Gráfico de progreso
-│       ├── LifespanChart.tsx # Gráfico de calidad de vida
+│       ├── Hero.tsx          # Hero section
+│       ├── Features.tsx      # Key features
+│       ├── Demo.tsx          # Interactive app mockup
+│       ├── ProgressChart.tsx # Progress visualization
+│       ├── LifespanChart.tsx # Longevity projection
 │       └── CTA.tsx           # Call to action
-└── public/
-    └── images/               # Imágenes estáticas
+├── docs/
+│   ├── ARCHITECTURE.md       # Technical architecture
+│   ├── AGENTS.md            # AI agents documentation
+│   └── SKILLS.md            # Agent skills and capabilities
+├── public/
+│   └── images/              # Static assets
+├── netlify.toml             # Netlify configuration
+└── README.md                # This file
 ```
 
-## Secciones de la Landing Page
+---
 
-### 1. Hero
-- Propuesta de valor clara
-- Badge de "Proyecto Piloto - Buscando Socios"
-- Estadísticas clave (+5 años de vida, 100% personalizado, 24/7 ajustes IA)
-- Switcher de idioma (ES/EN)
+## 🤖 AI Agents
 
-### 2. Features
-- 8 características principales con iconos
-- Diferenciador clave destacado
-- Diseño responsive con hover animations
+This project uses specialized AI agents for different tasks:
 
-### 3. Demo Interactiva
-- Mockup de teléfono móvil con la app
-- 4 pantallas navegables:
-  - Cuestionario inicial
-  - Dashboard personalizado
-  - Tracking diario
-  - Asistente IA 24/7
-- Selectores interactivos para cambiar entre pantallas
+- **Plan Generator Agent**: Creates personalized training and nutrition plans
+- **Meal Analyzer Agent**: Analyzes food photos and suggests recipes
+- **Progress Tracker Agent**: Monitors daily progress and adjusts plans
+- **Longevity Optimizer Agent**: Long-term health recommendations
 
-### 4. Gráfico de Progreso
-- Selector de vista: Diario, Semanal, Mensual
-- Métricas: Energía Mental, Fuerza, Grasa Corporal
-- Gráficos de área interactivos (recharts)
-- Tarjetas de estadísticas (+110% energía, +217% fuerza, -50% grasa)
+**See [AGENTS.md](./docs/AGENTS.md) for detailed agent documentation**
 
-### 5. Gráfico de Calidad de Vida
-- Proyección hasta 120+ años
-- Comparación: Con IA vs Sin optimización vs Promedio población
-- Milestones por décadas (30-50, 50-70, 70-90, 90-120+)
-- Visualización del objetivo: vivir plenamente hasta 120+
+---
 
-### 6. CTA (Call to Action)
-- Sección "Buscando Socios"
-- Perfiles buscados (co-fundadores, profesionales salud, developers, inversores)
-- Botones de contacto (LinkedIn, Email, Twitter/X)
-- Botón de compartir con Web Share API
+## 🛠️ Configuration
 
-### 7. Disclaimer
-- Advertencia clara: Proyecto Piloto - MVP en Desarrollo
-- Aclaración sobre datos simulados
-- No constituye consejo médico
+### 1. Contact Links
 
-## Estado del Proyecto
+Edit `components/landing/CTA.tsx` and `app/en/CTA.tsx`:
 
-### Completado ✅
-1. ✅ Landing page completa con todas las secciones
-2. ✅ Demo interactiva con mockup de la app
-3. ✅ Gráficos de progreso (diario, semanal, mensual)
-4. ✅ Gráfico de proyección de calidad de vida (hasta 120+ años)
-5. ✅ Sección CTA para buscar socios
-6. ✅ Disclaimers apropiados (MVP piloto)
-7. ✅ Versión en español e inglés
-8. ✅ Meta tags y Open Graph para redes sociales
-9. ✅ Responsive design
-
-### Próximos Pasos ⏳
-1. ⏳ Implementar cuestionario de onboarding funcional
-2. ⏳ Integración con API de IA
-3. ⏳ Dashboard de seguimiento real
-4. ⏳ Sistema de tracking diario con localStorage
-5. ⏳ Función de compartir resultados en redes
-6. ⏳ Validación científica con profesionales de la salud
-
-## Compartir en LinkedIn
-
-Para atraer socios, comparte la landing page en LinkedIn con este formato:
-
-```
-🚀 Estoy construyendo el futuro de la salud personalizada con IA
-
-Una app que combina:
-🧬 Datos médicos reales (glucosa, colesterol, exámenes)
-🤖 IA avanzada para planes personalizados
-⌚ Integración Apple Watch
-📊 Seguimiento diario inteligente
-
-Objetivo: Aumentar esperanza y calidad de vida con tecnología
-
-Busco: Co-fundadores, inversores, desarrolladores y profesionales de la salud
-
-🔗 [enlace-a-tu-landing]
-
-#HealthTech #AI #Startup #WellnessTech #Entrepreneurship
+```typescript
+LinkedIn: "https://www.linkedin.com/in/your-profile"
+Email: "your-email@example.com"
+Twitter: "https://twitter.com/your-username"
 ```
 
-## Deploy en Vercel
+### 2. Open Graph Image
 
-La forma más fácil de deployar es usar [Vercel](https://vercel.com/new):
+Create a 1200x630px image and save as `/public/og-image.jpg`
 
-1. Push tu código a GitHub
-2. Importa el proyecto en Vercel
-3. Vercel detectará Next.js automáticamente
-4. Deploy listo en minutos
+Recommended tools:
+- [Canva](https://www.canva.com/)
+- [Figma](https://www.figma.com/)
+- [OG Image Generator](https://og-image.vercel.app/)
 
-## Licencia
+### 3. Environment Variables
 
-MIT
+Copy `.env.example` to `.env.local`:
 
-## Contacto
+```bash
+# AI API Configuration
+AI_API_KEY=your_api_key_here
 
-- LinkedIn: [Tu Perfil]
-- Email: tu-email@ejemplo.com
-- Twitter: @tu_usuario
+# App Configuration
+NEXT_PUBLIC_APP_URL=https://your-domain.netlify.app
+```
+
+---
+
+## 📊 Roadmap
+
+### Phase 1: MVP Landing Page ✅ (Current)
+- [x] Hero section with value proposition
+- [x] Features showcase
+- [x] Interactive demo mockup
+- [x] Progress visualization charts
+- [x] Lifespan projection graph
+- [x] Partner recruitment CTA
+- [x] Bilingual support (ES/EN)
+- [x] SEO optimization
+
+### Phase 2: Functional Onboarding ⏳ (Next)
+- [ ] Multi-step questionnaire
+- [ ] Medical data input
+- [ ] Photo upload for body composition
+- [ ] Goal setting
+- [ ] LocalStorage persistence
+
+### Phase 3: AI Integration ⏳
+- [ ] AI API integration
+- [ ] Plan generation engine
+- [ ] Meal recommendation system
+- [ ] Daily adjustment algorithm
+
+### Phase 4: Wearables & Tracking ⏳
+- [ ] Apple Watch HealthKit integration
+- [ ] Real-time activity sync
+- [ ] Photo-based progress tracking
+- [ ] Meal photo analysis with computer vision
+
+### Phase 5: Dashboard & Analytics ⏳
+- [ ] User dashboard
+- [ ] Progress tracking over time
+- [ ] AI chat assistant
+- [ ] Social sharing features
+
+### Phase 6: Scientific Validation ⏳
+- [ ] Partnership with health professionals
+- [ ] Clinical studies
+- [ ] Peer-reviewed research
+- [ ] Medical advisory board
+
+---
+
+## 🤝 Contributing
+
+This is a pilot project seeking partners and collaborators:
+
+**We're looking for:**
+- 💼 Co-founders with healthtech experience
+- 🏥 Health professionals (nutritionists, doctors)
+- 💻 Developers passionate about AI + health
+- 💰 Investors focused on wellness & longevity
+
+**See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guidelines**
+
+---
+
+## 📄 License
+
+MIT License - see [LICENSE](./LICENSE) for details
+
+---
+
+## ⚠️ Disclaimer
+
+This is a pilot project in validation phase. Data and projections shown are simulations for illustrative purposes based on longevity research and healthy habits studies.
+
+We are seeking partners, health professionals, developers, and investors to scientifically validate this project and build a product that truly improves people's health and life expectancy.
+
+**Not medical advice.** Always consult with health professionals before making changes to your diet or exercise routine.
+
+---
+
+## 📞 Contact
+
+- **LinkedIn**: [devjaime](https://www.linkedin.com/in/devjaime)
+- **GitHub**: [@devjaime](https://github.com/devjaime)
+- **Email**: hernandez.hs@gmail.com
+
+---
+
+## 🌟 Support
+
+If you find this project interesting, please:
+- ⭐ Star this repository
+- 🐦 Share on Twitter/LinkedIn
+- 🤝 Connect for partnership opportunities
+
+---
+
+<div align="center">
+
+# Español
+
+</div>
+
+## 🎯 Visión
+
+Este proyecto busca revolucionar la salud personalizada combinando:
+- 🧬 **Datos médicos reales** (glucosa, colesterol, exámenes de sangre)
+- 🤖 **IA avanzada** para planes adaptativos diarios
+- ⌚ **Integración con wearables** (Apple Watch, dispositivos de salud)
+- 📸 **Visión por computadora** para tracking de progreso y análisis de comidas
+- 📊 **Análisis predictivo** para optimización de longevidad
+
+**Objetivo**: Empoderar a las personas para vivir 120+ años con energía, vitalidad y salud sostenidas.
+
+## ✨ Características Principales
+
+### 🎨 MVP Landing Page (Actual)
+- ✅ Demo interactiva con mockup de la app
+- ✅ Gráficos dinámicos de progreso (diario/semanal/mensual)
+- ✅ Visualización de proyección de calidad de vida (hasta 120+ años)
+- ✅ Soporte bilingüe (Español/Inglés)
+- ✅ CTA para reclutamiento de socios
+- ✅ Diseño totalmente responsive
+- ✅ Optimizado para SEO con Open Graph
+
+### 🚀 Funcionalidades Planeadas (Roadmap)
+- ⏳ Cuestionario de onboarding funcional
+- ⏳ Integración con IA para generación de planes
+- ⏳ Integración Apple Watch HealthKit
+- ⏳ Carga de fotos para tracking de progreso
+- ⏳ Análisis de fotos de comidas con IA
+- ⏳ Dashboard en tiempo real
+- ⏳ Capacidades de compartir en redes sociales
+- ⏳ Validación científica con profesionales de la salud
+
+## 🚀 Inicio Rápido
+
+### Prerequisitos
+- Node.js 18+
+- npm o yarn
+- Git
+
+### Instalación
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/devjaime/app-entrenamiento-ia.git
+cd app-entrenamiento-ia
+
+# Instalar dependencias
+npm install
+
+# Ejecutar servidor de desarrollo
+npm run dev
+```
+
+Abre [http://localhost:3000](http://localhost:3000) para versión en español
+Abre [http://localhost:3000/en](http://localhost:3000/en) para versión en inglés
+
+## 🤖 Agentes IA
+
+Este proyecto usa agentes IA especializados para diferentes tareas:
+
+- **Agente Generador de Planes**: Crea planes personalizados de entrenamiento y nutrición
+- **Agente Analizador de Comidas**: Analiza fotos de alimentos y sugiere recetas
+- **Agente Rastreador de Progreso**: Monitorea progreso diario y ajusta planes
+- **Agente Optimizador de Longevidad**: Recomendaciones de salud a largo plazo
+
+**Ver [AGENTS.md](./docs/AGENTS.md) para documentación detallada de agentes**
+
+## 🤝 Contribuir
+
+Este es un proyecto piloto que busca socios y colaboradores:
+
+**Buscamos:**
+- 💼 Co-fundadores con experiencia en healthtech
+- 🏥 Profesionales de la salud (nutricionistas, médicos)
+- 💻 Desarrolladores apasionados por IA + salud
+- 💰 Inversores enfocados en wellness y longevidad
+
+## 📞 Contacto
+
+- **LinkedIn**: [devjaime](https://www.linkedin.com/in/devjaime)
+- **GitHub**: [@devjaime](https://github.com/devjaime)
+- **Email**: hernandez.hs@gmail.com
+
+---
+
+<div align="center">
+
+**Built with ❤️ for human longevity and optimal health**
+
+[⬆ Back to top](#ai-health-coach---personalized-training--longevity-app)
+
+</div>

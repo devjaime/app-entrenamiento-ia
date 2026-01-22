@@ -70,7 +70,7 @@ export default function CTA() {
 
                 {/* Email Button */}
                 <a
-                  href="mailto:tu-email@ejemplo.com?subject=Interés en App de Entrenamiento con IA"
+                  href="mailto:hernandez.hs@gmail.com?subject=Interés en App de Entrenamiento con IA"
                   className="flex items-center justify-center gap-3 w-full px-6 py-4 bg-white hover:bg-gray-100 text-gray-900 font-semibold rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
