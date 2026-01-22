@@ -75,7 +75,7 @@ export default function CTA() {
                 </a>
 
                 <a
-                  href="https://twitter.com/devjaime"
+                  href="https://x.com/HsJhernandez"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 w-full px-6 py-4 bg-black hover:bg-gray-900 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"

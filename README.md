@@ -237,7 +237,7 @@ Contact information is already configured:
 ```typescript
 LinkedIn: "https://www.linkedin.com/in/devjaime"
 Email: "hernandez.hs@gmail.com"
-Twitter: "https://twitter.com/devjaime"
+Twitter/X: "https://x.com/HsJhernandez"
 ```
 
 To update, edit `components/landing/CTA.tsx` and `app/en/CTA.tsx`.
@@ -344,6 +344,7 @@ We are seeking partners, health professionals, developers, and investors to scie
 
 - **LinkedIn**: [devjaime](https://www.linkedin.com/in/devjaime)
 - **GitHub**: [@devjaime](https://github.com/devjaime)
+- **Twitter/X**: [@HsJhernandez](https://x.com/HsJhernandez)
 - **Email**: hernandez.hs@gmail.com
 
 ---
@@ -444,6 +445,7 @@ Este es un proyecto piloto que busca socios y colaboradores:
 
 - **LinkedIn**: [devjaime](https://www.linkedin.com/in/devjaime)
 - **GitHub**: [@devjaime](https://github.com/devjaime)
+- **Twitter/X**: [@HsJhernandez](https://x.com/HsJhernandez)
 - **Email**: hernandez.hs@gmail.com
 
 ---
