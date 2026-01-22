@@ -93,7 +93,7 @@ export default function LifespanChart() {
                   padding: '16px',
                   boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                 }}
-                formatter={(value: number) => [`${value}%`, '']}
+                formatter={(value) => [`${value ?? 0}%`, '']}
               />
               <Legend
                 wrapperStyle={{ paddingTop: '20px' }}
