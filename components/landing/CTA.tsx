@@ -1,5 +1,7 @@
 'use client';
 
+import WaitlistSignup from './WaitlistSignup';
+
 export default function CTA() {
   return (
     <section className="py-24 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-black">
@@ -132,6 +134,20 @@ export default function CTA() {
               Compartir
             </button>
           </div>
+        </div>
+
+        {/* Waitlist Signup */}
+        <div className="mt-16 max-w-2xl mx-auto">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              🎯 ¿Quieres probar la app primero?
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Únete a la lista de espera y sé el primero en saber cuando lancemos. 
+              Además, recibirás tips gratuitos de salud y longevidad.
+            </p>
+          </div>
+          <WaitlistSignup />
         </div>
       </div>
     </section>
