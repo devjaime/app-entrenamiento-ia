@@ -2,97 +2,84 @@ export default function Features() {
   const features = [
     {
       icon: "🧬",
-      title: "Personalización Total",
-      description:
-        "Basado en tus datos médicos reales: glucosa, colesterol, índice de grasa corporal, exámenes de sangre y edad.",
+      title: "Datos Genéticos",
+      description: "Integración con análisis de sangre, perfil lipídico y marcadores inflamatorios para planes personalizados.",
     },
     {
-      icon: "🤖",
-      title: "IA que Aprende de Ti",
-      description:
-        "La IA analiza tu progreso diario y ajusta automáticamente tu plan de entrenamiento y nutrición.",
+      icon: "⏱️",
+      title: "Tiempo Real",
+      description: "Tracking 24/7 con Apple Watch y dispositivos wearables. Métricas diarias de recuperación y rendimiento.",
     },
     {
-      icon: "🍎",
-      title: "Nutrición Inteligente",
-      description:
-        "Dile a la IA qué tienes en tu refrigerador y obtén recetas personalizadas que se ajustan a tu plan.",
-    },
-    {
-      icon: "⌚",
-      title: "Integración Apple Watch",
-      description:
-        "Sincroniza tus pasos, cardio y métricas de actividad para un seguimiento completo y preciso.",
-    },
-    {
-      icon: "📊",
-      title: "Objetivos Dinámicos",
-      description:
-        "Establece metas diarias y semanales que se ajustan según tu progreso y contexto personal.",
-    },
-    {
-      icon: "🧠",
-      title: "Energía Mental",
-      description:
-        "No solo fitness físico: optimiza tu energía mental y rendimiento laboral con recomendaciones personalizadas.",
+      icon: "📸",
+      title: "Foto-Análisis IA",
+      description: "Sube fotos de tu comida y nuestra IA analiza porciones, calorías y calidad nutricional al instante.",
     },
     {
       icon: "🎯",
-      title: "Resultados Medibles",
-      description:
-        "Monitorea tu progreso con métricas claras y comparte tus logros en redes sociales para inspirar a otros.",
+      title: "Planes Adaptativos",
+      description: "El algoritmo ajusta tu plan diario basado en tu energía, sueño y objetivos. No es estático, evoluciona.",
     },
     {
-      icon: "🔬",
-      title: "Basado en Ciencia",
-      description:
-        "Cada recomendación está fundamentada en datos médicos y científicos, no en modas pasajeras.",
+      icon: "🏆",
+      title: "Proyección de Longevidad",
+      description: "Visualiza cómo tus hábitos impactan tu esperanza de vida. Basado en evidencia científica.",
+    },
+    {
+      icon: "👨‍⚕️",
+      title: "Coaches Certificados",
+      description: "Acceso a nutricionistas y médicos deportivos. Telemedicina integrada para seguimiento profesional.",
     },
   ];
 
   return (
     <section className="py-24 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Section Header */}
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            ¿Por Qué Esta App es Diferente?
+          <span className="inline-block px-4 py-2 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium mb-4">
+            ✨ Características Únicas
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            La ciencia de vivir{' '}
+            <span className="text-emerald-600">120+ años</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            No es otra app de fitness genérica. Es tu entrenador personal con IA
-            que se adapta a tu biología y objetivos únicos.
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            No es solo ejercicio. Es un ecosistema completo de salud personalizada 
+            impulsado por inteligencia artificial de frontera.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group p-8 rounded-2xl bg-gray-50 dark:bg-gray-800 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/10 border border-transparent hover:border-emerald-200 dark:hover:border-emerald-800"
             >
-              <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-4xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Additional Benefits */}
-        <div className="mt-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center">
-          <h3 className="text-3xl font-bold text-white mb-4">
-            El Diferenciador Clave
-          </h3>
-          <p className="text-xl text-blue-50 max-w-3xl mx-auto leading-relaxed">
-            Mientras otras apps te dan planes genéricos, nosotros usamos tus datos
-            médicos reales y el poder de la IA para crear un plan que evoluciona
-            contigo cada día. Tu cuerpo es único, tu plan también debería serlo.
+        {/* CTA */}
+        <div className="mt-16 text-center">
+          <a
+            href="#waitlist"
+            className="inline-block px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 shadow-lg shadow-emerald-600/25"
+          >
+            🚀 Únete a la Lista de Espera
+          </a>
+          <p className="mt-4 text-gray-500 dark:text-gray-400 text-sm">
+            Lanzamiento 2026 • Cupos limitados para beta
           </p>
         </div>
       </div>
