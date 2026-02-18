@@ -15,23 +15,25 @@ export default function Home() {
       <LifespanChart />
       <CTA />
 
-      {/* Disclaimer */}
-      <section className="py-12 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+      {/* Disclaimer - Versión honesta */}
+      <section className="py-12 bg-red-50 dark:bg-red-900/20 border-t border-red-200 dark:border-red-800">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-            <p className="font-semibold text-gray-900 dark:text-white mb-2">
-              ⚠️ Proyecto Piloto - MVP en Desarrollo
+          <div className="text-sm text-red-800 dark:text-red-200 leading-relaxed">
+            <p className="font-bold text-lg mb-4">
+              ⚠️ ESTADO REAL DEL PROYECTO
             </p>
-            <p className="mb-2">
-              Este es un concepto de producto en fase de validación. Los datos y proyecciones mostrados son simulaciones con fines ilustrativos
-              basadas en investigaciones sobre longevidad y hábitos saludables.
+            <p className="mb-4">
+              <strong>Esto es una landing page de presentación.</strong> La app NO existe todavía.
+              Las funcionalidades que ves (IA, Apple Watch, análisis de fotos, longevidad) son 
+              lo que QUEREMOS construir, no lo que tenemos hoy.
             </p>
-            <p className="mb-2">
-              Buscamos socios, profesionales de la salud, desarrolladores e inversores para validar científicamente este proyecto
-              y construir un producto que realmente mejore la salud y esperanza de vida de las personas.
+            <p className="mb-4">
+              Si te sumas a la waitlist, te avisaremos cuando empecemos a desarrollar cada feature.
+              Estamos buscando socios y desarrolladores para hacerlo realidad.
             </p>
-            <p className="text-xs text-gray-500 dark:text-gray-500">
-              No constituye consejo médico. Consulta siempre con profesionales de la salud antes de hacer cambios en tu dieta o ejercicio.
+            <p className="font-semibold text-red-700 dark:text-red-300">
+              🚫 No constituye consejo médico. 
+              Consulta siempre con profesionales de la salud.
             </p>
           </div>
         </div>
